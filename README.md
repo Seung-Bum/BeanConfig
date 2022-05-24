@@ -8,3 +8,4 @@
 2. BeansConfig_component => component-scan, @ 사용
 3. BeansConfig_applicationConfig => application.xml과 같은 XML 파일이 아닌 java로도 설정파일을 만들 수 있다.(ApplicationConfig.java)
 4. BeansConfig_applicationConfig,component => JAVA 설정 파일(ApplicationConfig.java) + Component Scan
+5. lesson1 => 위의 방법들을 한 프로젝트에 모두 담겨 있고 MockTest 파일도 같이 있음
