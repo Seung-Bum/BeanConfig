@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 //@ComponentScan(basePackages = "com.develop.springapplicationcontext")
-@ComponentScan(basePackageClasses = ApplicationConfig.class)    // 더 type safe한 방법
+@ComponentScan(basePackageClasses = ApplicationConfig.class)    // 위에 보다 더 type safe한 방법
 public class ApplicationConfig {
 }
 
