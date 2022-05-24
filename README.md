@@ -5,3 +5,4 @@ https://atoz-develop.tistory.com/entry/Spring-%EB%B9%88%EC%9D%84-%EC%84%A4%EC%A0
 
 1. BeanConfig => XML로 빈 설정하기
 2. BeansConfig_component => component-scan, @ 사용
+3. BeansConfig_applicationConfig => application.xml과 같은 XML 파일이 아닌 java로도 설정파일을 만들 수 있다.(ApplicationConfig.java)
