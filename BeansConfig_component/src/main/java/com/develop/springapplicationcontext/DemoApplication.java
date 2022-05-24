@@ -6,6 +6,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.Arrays;
 
+
+//application.xml에 일일이 설정하는 대신 애노테이션을 scanning해서 빈을 등록하고 의존성 주입하도록 변경한 것이다.
 public class DemoApplication {
 
     public static void main(String[] args) {
@@ -23,3 +25,9 @@ public class DemoApplication {
     }
 }
 
+// [bookRepository, bookService, org.springframework.context.annotation.internalConfigurationAnnotationProcessor,
+// org.springframework.context.annotation.internalAutowiredAnnotationProcessor,
+// org.springframework.context.annotation.internalCommonAnnotationProcessor,
+// org.springframework.context.event.internalEventListenerProcessor,
+// org.springframework.context.event.internalEventListenerFactory]
+//true

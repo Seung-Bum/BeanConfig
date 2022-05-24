@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- ApplicationContext 스프링 컨테이너 -->
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="bookService"
-          class="com.develop.springapplicationcontext.BookService"/>
+          class="com.develop.springapplicationcontext.BookService">
+        <property name="bookRepository" ref="bookRepository"/>
+    </bean>
 
     <bean id="bookRepository"
           class="com.develop.springapplicationcontext.BookRepository"/>
 
 </beans>
+<!--        빈 주입은 주입받을 빈의 <bean> 태그 하위에 <property> 태그를 이용해서 설정하면 된다.-->
+<!--        <property>의 name 속성에 프로퍼티(setter) 이름을, ref 속성에는 주입할 빈의 id를 지정한다. -->
+<!--        등록한 빈은 ApplicationContext를 통해 사용할 수 있다.-->
+
+
