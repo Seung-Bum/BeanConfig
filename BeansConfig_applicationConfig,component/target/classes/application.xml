@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+<!--    <bean id="bookService"-->
+<!--          class="com.develop.springapplicationcontext.BookService"/>-->
+
+<!--    <bean id="bookRepository"-->
+<!--          class="com.develop.springapplicationcontext.BookRepository"/>-->
+
+    <context:component-scan base-package="com.develop.springapplicationcontext"/>
+<!--    위 설정은 base-package에 지정한 패키지에서부터 모든 하위 패키지를 scanning해서 빈을 등록하도록 한다. -->
+<!--    당연히 모든 클래스를 빈으로 등록하는 건 아니고 @Component 애노테이션이 붙은 클래스를 빈으로 등록한다. -->
+</beans>
+
+
