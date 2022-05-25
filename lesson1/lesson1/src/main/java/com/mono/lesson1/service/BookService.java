@@ -15,9 +15,13 @@ public class BookService {
     @Autowired
     private BookRepository bookRepository;
 
-    public void setBookRepository(BookRepository bookRepository) {
-        this.bookRepository = bookRepository;
+    public BookService(BookRepository bookRepository) { this.bookRepository = bookRepository; }
+
+    public BookService() {
+
     }
+
+    public void setBookRepository(BookRepository bookRepository) { this.bookRepository = bookRepository; }
 
     @PostConstruct
     public void postConstructor() {
@@ -25,6 +29,12 @@ public class BookService {
         System.out.println("BookService 초기화");
         System.out.println(bookRepository.getClass());
         System.out.println("++++++++++++++++++++");
+    }
+
+    public Book save(Book book) {
+        book.setCreated(new Date());
+        book.setBookStatus(BookStatus.DRAFT);
+        return bookRepository.save(book);
     }
 
     /*
